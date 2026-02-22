@@ -23,6 +23,32 @@ go get github.com/rgglez/go-playground-uts-validator
 
 See the example in the [`examples`](examples) directory.
 
+## Tests
+
+Run the test suite with:
+
+```bash
+go test ./...
+```
+
+To include coverage:
+
+```bash
+go test -coverprofile=coverage.out ./... && go tool cover -func=coverage.out
+```
+
+### Test cases
+
+| Group | Cases |
+|-------|-------|
+| `RegisterUTSValidator` | default tag, custom tag |
+| String fields | valid numeric strings, empty string, non-numeric, float-like strings, strings with spaces |
+| Signed integers | `int`, `int8`, `int16`, `int32`, `int64` |
+| Unsigned integers | `uint`, `uint8`, `uint16`, `uint32`, `uint64` |
+| `time.Time` | non-zero values (valid), zero value (invalid) |
+| Pointer fields | `nil` pointer (invalid), non-nil pointer (valid) |
+| Unsupported kinds | `float64`, `bool` |
+
 ## License
 
 Copyright (C) 2026 Rodolfo González González.
