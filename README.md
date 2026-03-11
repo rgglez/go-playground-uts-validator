@@ -21,6 +21,31 @@ go get github.com/rgglez/go-playground-uts-validator
 
 ## Usage
 
+Define a custom validator(s) using the fiber middleware:
+
+```go
+app.Use(
+    gofibervalidator.New(gofibervalidator.Config{
+        ContextKey: "validator",
+        CustomValidations: map[string]validator.Func{
+            "uts": isuts.ValidateUnixTimestamp,
+        },
+    }),
+)
+```
+
+Use the `gofibervalidator.ValidateStruct` function to validate your input struct in the handler:
+
+```go
+	// Validate input
+	defaults.Set(&input)
+	if errors := gofibervalidator.ValidateStruct(c, input); errors != nil {
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
+			"errors": errors,
+		})
+	}
+```
+
 See the example in the [`examples`](examples) directory.
 
 ## Tests
