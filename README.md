@@ -4,7 +4,6 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/rgglez/go-playground-uts-validator/total)
 ![GitHub issues](https://img.shields.io/github/issues/rgglez/go-playground-uts-validator)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/rgglez/go-playground-uts-validator)
-[![Go Report Card](https://goreportcard.com/badge/github.com/rgglez/go-playground-uts-validator)](https://goreportcard.com/report/github.com/rgglez/go-playground-uts-validator)
 [![GitHub release](https://img.shields.io/github/release/rgglez/go-playground-uts-validator.svg)](https://github.com/rgglez/go-playground-uts-validator/releases/)
 ![GitHub stars](https://img.shields.io/github/stars/rgglez/go-playground-uts-validator?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/rgglez/go-playground-uts-validator?style=social)
